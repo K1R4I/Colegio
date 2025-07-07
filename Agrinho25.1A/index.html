@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jogo Agro Urbano com p5.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f0f0; }
+        canvas { border: 2px solid #333; }
+        /* Estilos adicionais podem ser aplicados a elementos HTML se você mantiver algum */
+        #gameInfo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 10; /* Garante que fique acima do canvas */
+        }
+        #gameControls {
+            position: absolute;
+            bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 10;
+        }
+        #gameControls button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameInfo">
+        <p>Dinheiro: <span id="moneyDisplay">0</span></p>
+        <p>Comida: <span id="foodDisplay">0</span></p>
+        <p>Água: <span id="waterDisplay">0</span></p>
+        <p>Materiais: <span id="materialsDisplay">0</span></p>
+        <p>Felicidade: <span id="happinessDisplay">0</span>%</p>
+        <p>Dia: <span id="gameTimeDisplay">0</span></p>
+    </div>
+
+    <div id="gameControls">
+        <button id="buildFarmButton">Construir Fazenda (Custo: $100, M:10)</button>
+        <button id="harvestButton">Colher</button>
+    </div>
+
+    <script src="sketch.js"></script> </body>
+</html>
